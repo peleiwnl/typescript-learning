@@ -1,0 +1,25 @@
+1. Button click counter - Done
+2. Random Teleporter - Done
+3. Simple leaderboard - Done
+4. Coin Collector -
+5. Rock-Paper Scissors game
+6. Obby
+7. Random Item Spawner
+8. Simple chat command
+
+
+shared/events.ts - create an events folder, and a coin collected folder
+
+server/coinManager.ts - create a spawn coins function that:
+creates a new part instance
+sets the size, position, anchor, and parent
+has a touched function with a parameter that when touched, it finds the parent of that parameter as the player
+fires an event to the players client with the coin
+destroys the coin
+
+client/coinUI.client.ts
+
+
+server/main.server.ts - import the spawning coins function and use it
+
+client/main.client.ts -  import the coin ui
