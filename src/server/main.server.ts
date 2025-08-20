@@ -1,5 +1,6 @@
-const PlayerService = game.GetService("Players");
+const ReplicatedStorage = game.GetService("ReplicatedStorage");
+const event = ReplicatedStorage.WaitForChild("RemoteEvent") as RemoteEvent;
 
-PlayerService.PlayerAdded.Connect(function (player) {
-	print(player.Name);
+event.OnServerEvent.Connect((plr) => {
+	print(plr.Name + "Fired the Server!");
 });
