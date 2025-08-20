@@ -1,9 +1,11 @@
-const player: Player = game.GetService("Players").LocalPlayer;
+import { Players } from "@rbxts/services";
+import { ReplicatedStorage } from "@rbxts/services";
+
+const player = Players.LocalPlayer;
 const playerGui: PlayerGui = player.WaitForChild("PlayerGui") as PlayerGui;
 const screenGui: ScreenGui = playerGui.WaitForChild("ScreenGui") as ScreenGui;
 const button: TextButton = screenGui.WaitForChild("TextButton") as TextButton;
 const label: TextLabel = screenGui.WaitForChild("TextLabel") as TextLabel;
-const ReplicatedStorage = game.GetService("ReplicatedStorage");
 const event = ReplicatedStorage.WaitForChild("RemoteEvent") as RemoteEvent;
 const character = player.Character as Model;
 const hRP = character.WaitForChild("HumanoidRootPart") as Part;
